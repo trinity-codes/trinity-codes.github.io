@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & Butter</title>
+</head>
+<body>
+    <h1>Coffee & Butter</h1>
+
+    <section data-position="add-quote">
+        <h2>Add quote</h2>
+  
+        <form action="/quotes" method="POST">
+          <input type="text" placeholder="name" name="name" />
+          <input type="text" placeholder="quote" name="quote" />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+    <section data-position="quotes">
+        <h2>Quotes</h2>
+  
+        <ul class="quotes">
+          <% for(var i = 0; i < quotes.length; i++) {%>
+          <li class="quote">
+            <span><%= quotes[i].name %>: </span>
+            <span><%= quotes[i].quote %></span>
+            <span class='fa fa-trash'></span>
+          </li>
+          <% } %>
+        </ul>
+      </section>
+
+
+    
+
+    <script src='js/main.js'></script>
+</body>
+</html>
